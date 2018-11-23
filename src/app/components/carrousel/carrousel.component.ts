@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 
 // services
 import { AnimeService } from '../../services/anime.service';
+
 @Component({
-  selector: 'app-body',
-  templateUrl: './body.component.html',
-  styleUrls: ['./body.component.css']
+  selector: 'app-carrousel',
+  templateUrl: './carrousel.component.html',
+  styleUrls: ['./carrousel.component.css']
 })
-export class BodyComponent implements OnInit {
+export class CarrouselComponent implements OnInit {
 
   constructor( public _animeService: AnimeService) { }
 
