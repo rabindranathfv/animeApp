@@ -10,7 +10,7 @@ import { AnimeService } from '../../services/anime.service'
 })
 export class AnimelistComponent implements OnInit {
 
-  constructor( public _animeService:AnimeService ) { }
+  constructor( public _animeService: AnimeService ) { }
 
   ngOnInit() {
   }

@@ -13,6 +13,7 @@ import { BodyComponent } from './components/body/body.component';
 import { CarrouselComponent } from './components/carrousel/carrousel.component';
 import { AnimelistComponent } from './components/animelist/animelist.component';
 import { AnimetopComponent } from './components/animetop/animetop.component';
+import { AnimeDetailComponent } from './components/anime-detail/anime-detail.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AnimetopComponent } from './components/animetop/animetop.component';
     BodyComponent,
     CarrouselComponent,
     AnimelistComponent,
-    AnimetopComponent
+    AnimetopComponent,
+    AnimeDetailComponent
   ],
   imports: [
     BrowserModule,
