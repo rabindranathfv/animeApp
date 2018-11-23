@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 // services
-import { AnimeService } from '../../services/anime.service'
+import { AnimeService } from '../../services/anime.service';
 
 @Component({
   selector: 'app-animelist',
