@@ -5,20 +5,17 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="" [routerLink]="['home']">
         <img src="../../assets/img/anime_logo.png" class="img-navbar" alt="Anime Logo">
       </a>
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
          <!-- clase active para desabilitar en el navbar -->
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home</a>
-        </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Anime</a>
+          <a class="nav-link" href=" " [routerLink]="['/anime']">Anime</a>
         </li>
         <li class="nav-item">
         <!-- clase disabled para desabilitar en el navbar -->
-          <a class="nav-link " href="#">Top Anime</a>
+          <a class="nav-link " href=" " [routerLink]="['/anime-top']">Top Anime</a>
         </li>
       </ul>
 

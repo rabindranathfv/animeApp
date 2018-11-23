@@ -8,7 +8,7 @@ import { AnimetopComponent } from './components/animetop/animetop.component';
 import { AnimeDetailComponent } from './components/anime-detail/anime-detail.component';
 
 const routes: Routes = [
-  { path: 'home', component: BodyComponent },
+  { path: 'home', component: BodyComponent},
   { path: 'anime', component: AnimelistComponent },
   { path: 'anime-top', component: AnimetopComponent },
   { path: 'anime-detail/:id', component: AnimeDetailComponent },
