@@ -14,6 +14,7 @@ import { CarrouselComponent } from './components/carrousel/carrousel.component';
 import { AnimelistComponent } from './components/animelist/animelist.component';
 import { AnimetopComponent } from './components/animetop/animetop.component';
 import { AnimeDetailComponent } from './components/anime-detail/anime-detail.component';
+import { TitlePageComponent } from './components/title-page/title-page.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AnimeDetailComponent } from './components/anime-detail/anime-detail.com
     CarrouselComponent,
     AnimelistComponent,
     AnimetopComponent,
-    AnimeDetailComponent
+    AnimeDetailComponent,
+    TitlePageComponent
   ],
   imports: [
     BrowserModule,

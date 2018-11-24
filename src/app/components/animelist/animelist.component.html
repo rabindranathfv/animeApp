@@ -1,6 +1,8 @@
-<div class="container container-fuild">
+<div class="container container-fuild mg-top-20">
   <div class="row">
     <div class="col">
+
+    <app-title-page></app-title-page>
       
     <div class="card-deck">
       <div class="card">
@@ -14,7 +16,7 @@
         </div>
       </div>
       <div class="card">
-        <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+        <img class="card-img-top" src=".../100px180/" [routerLink]="['/anime-detail',id]"alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
           <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
