@@ -4,38 +4,20 @@
 
     <app-title-page></app-title-page>
       
-    <div class="card-deck">
-      <div class="card">
-        <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+    <div class="card-columns">
+      <div class="card" *ngFor="let anime of animelist; let id = index">
+      <a name="" id="id"  href="#" [routerLink]="['/anime-detail',id]">
+        <img class="card-img-top" [src]="anime.img" [alt]="anime.nombre">
+      </a>
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <h5 class="card-title">{{ anime.nombre }}</h5>
+          <p class="card-text">{{ anime.bio }}</p>
+          <button type="button" class="btn btn-outline-primary btn-block" [routerLink]="['/anime-detail',id]"> See More of {{ anime.nombre }}!!</button>
         </div>
         <div class="card-footer">
-          <small class="text-muted">Last updated 3 mins ago</small>
+          <small class="text-muted text-center">{{ anime.casa }} - {{ anime.aparicion }}</small>
         </div>
       </div>
-      <div class="card">
-        <img class="card-img-top" src=".../100px180/" [routerLink]="['/anime-detail',id]"alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-      </div>
-    </div>
 
     </div>
   </div>

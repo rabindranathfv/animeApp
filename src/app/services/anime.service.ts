@@ -59,18 +59,19 @@ export class AnimeService {
 
   constructor() {
     console.log(`Servicio de Anime Listo`);
-    console.log(this.animeList);
+    this.getAnimes();
    }
 
-   getAnimes(): any {
+   getAnimes() {
+     console.log(`usando el metodo getAnimes Directo del servicio`);
      return this.animeList;
    }
 
-   getAnimesTop(): any {
+   getAnimesTop() {
     return this.animeList;
   }
 
-  getAnimesRandonly(): any {
+  getAnimesRandonly() {
     return this.animeList;
   }
 }

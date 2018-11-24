@@ -10,9 +10,12 @@ import { AnimeService } from '../../services/anime.service';
 })
 export class AnimelistComponent implements OnInit {
 
+  animelist: any[];
   constructor( public _animeService: AnimeService ) { }
 
   ngOnInit() {
+    this.animelist = this._animeService.getAnimes();
+    console.log(this.animelist);
   }
 
 }

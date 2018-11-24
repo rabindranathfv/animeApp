@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
+// routes
 import { AppRoutingModule } from './app-routing.module';
 
 // services
@@ -29,7 +32,9 @@ import { TitlePageComponent } from './components/title-page/title-page.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule,
+    FormsModule
   ],
   providers: [
     AnimeService,
