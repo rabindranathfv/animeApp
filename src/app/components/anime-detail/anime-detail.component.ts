@@ -19,7 +19,7 @@ export class AnimeDetailComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.params.subscribe( (params) => {
       console.log(`el id tomando de la URL es ${params['id']}`);
-      this.anime = this._animeService.getAnime(params['id']);
+      return this.anime = this._animeService.getAnime(params['id']);
     });
   }
 
