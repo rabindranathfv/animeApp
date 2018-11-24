@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+import { AnimeService } from '../../services/anime.service';
 
 @Component({
   selector: 'app-anime-detail',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnimeDetailComponent implements OnInit {
 
-  constructor() { }
+  anime: any = {};
+
+  constructor( public _animeService: AnimeService,
+               private activatedRoute: ActivatedRoute
+    ) { }
 
   ngOnInit() {
+    this.activatedRoute.params.subscribe( (params) => {
+      console.log(`el id tomando de la URL es ${params['id']}`);
+      this.anime = this._animeService.getAnime(params['id']);
+    });
   }
 
 }

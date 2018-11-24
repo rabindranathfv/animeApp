@@ -66,6 +66,10 @@ export class AnimeService {
      return this.animeList;
    }
 
+   getAnime( id: number) {
+     return this.animeList[id];
+   }
+
    getAnimesTop() {
     return this.animeList;
   }
