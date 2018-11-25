@@ -4,6 +4,13 @@
         <div class="col">
             <h2 class="mg-top-bot-20"> Results of "{{ searchTerm }}"</h2>
             <hr class="divider">
+
+            <div class="row" *ngIf="animeList.length == 0">
+                <div class="alert alert-danger" role="alert">
+                    Non found results of "{{ searchTerm }}"
+                </div>
+            </div>
+
             <div class="card-columns">
                 <div class="card" *ngFor="let anime of animeList; let id = index">
                     <a name="" id="id" href="#" [routerLink]="['/anime-detail',id]">
