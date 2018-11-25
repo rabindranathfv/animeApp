@@ -1,24 +1,22 @@
 <div class="container container-fuild mg-top-20">
-  <div class="row">
-    <div class="col">
+    <div class="row">
+        <div class="col">
 
-    <app-title-page></app-title-page>
-      
-    <div class="card-columns">
-      <div class="card" *ngFor="let anime of animelist; let id = index">
-      <a name="" id="id"  href="#" [routerLink]="['/anime-detail',id]">
-        <img class="card-img-top" [src]="anime.img" [alt]="anime.nombre">
-      </a>
-        <div class="card-body">
-          <h5 class="card-title">{{ anime.nombre }}</h5>
-          <p class="card-text">{{ anime.bio }}</p>
-          <button type="button" class="btn btn-outline-primary btn-block" (click)="getId(id)"> See More of {{ anime.nombre }}!!</button>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted text-center">{{ anime.casa }} - {{ anime.aparicion }}</small>
-        </div>
-      </div>
+            <div class="card-columns">
+                <div class="card" *ngFor="let anime of animelist; let id = index">
+                    <a name="" id="id" href="#" [routerLink]="['/anime-detail',id]">
+                        <img class="card-img-top" [src]="anime.img" [alt]="anime.nombre">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ anime.nombre }}</h5>
+                        <p class="card-text">{{ anime.bio }}</p>
+                        <button type="button" class="btn btn-outline-primary btn-block" (click)="getId(id)"> See More of {{ anime.nombre }}!!</button>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted text-center">{{ anime.casa }} - {{ anime.aparicion }}</small>
+                    </div>
+                </div>
 
+            </div>
+        </div>
     </div>
-  </div>
-</div>

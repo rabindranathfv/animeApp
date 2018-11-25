@@ -17,7 +17,6 @@ import { CarrouselComponent } from './components/carrousel/carrousel.component';
 import { AnimelistComponent } from './components/animelist/animelist.component';
 import { AnimetopComponent } from './components/animetop/animetop.component';
 import { AnimeDetailComponent } from './components/anime-detail/anime-detail.component';
-import { TitlePageComponent } from './components/title-page/title-page.component';
 import { SearchAnimeComponent } from './components/search-anime/search-anime.component';
 
 @NgModule({
@@ -29,7 +28,6 @@ import { SearchAnimeComponent } from './components/search-anime/search-anime.com
     AnimelistComponent,
     AnimetopComponent,
     AnimeDetailComponent,
-    TitlePageComponent,
     SearchAnimeComponent
   ],
   imports: [
