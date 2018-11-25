@@ -21,7 +21,8 @@ export class NavbarComponent implements OnInit {
 
   findAnime( searchTerm: string) {
     // this.anime = this._animeService.findAnimeByName(searchTerm);
-    if ( searchTe  rm.length > 0 ) {
+    console.log(`el termino es ${searchTerm}`);
+    if ( searchTerm.length > 0 ) {
       this.router.navigate( ['/search', searchTerm] );
     }
   }
