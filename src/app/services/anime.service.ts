@@ -77,4 +77,18 @@ export class AnimeService {
   getAnimesRandonly() {
     return this.animeList;
   }
+
+  findAnimeByName( searchTerm: string) {
+    const term = searchTerm.toLocaleLowerCase();
+    let animeArr = [];
+    if ( searchTerm.length > 0) {
+      this.animeList.forEach( (elem) => {
+        if ( elem.nombre.toLocaleLowerCase().indexOf(term) >= 0) {
+          animeArr.push(elem);
+        }
+      });
+
+    }
+    return animeArr;
+  }
 }

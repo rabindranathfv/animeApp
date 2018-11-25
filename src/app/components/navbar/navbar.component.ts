@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { AnimeService } from '../../services/anime.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  anime: any = [];
+  constructor( public _animeService: AnimeService,
+               private router: Router
+    ) { }
 
   ngOnInit() {
+  }
+
+
+  findAnime( searchTerm: string) {
+    // this.anime = this._animeService.findAnimeByName(searchTerm);
+    if ( searchTe  rm.length > 0 ) {
+      this.router.navigate( ['/search', searchTerm] );
+    }
   }
 
 }

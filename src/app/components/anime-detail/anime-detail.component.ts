@@ -22,5 +22,4 @@ export class AnimeDetailComponent implements OnInit {
       return this.anime = this._animeService.getAnime(params['id']);
     });
   }
-
 }
