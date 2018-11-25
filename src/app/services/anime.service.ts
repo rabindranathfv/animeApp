@@ -57,12 +57,10 @@ export class AnimeService {
   ];
 
   constructor() {
-    console.log(`Servicio de Anime Listo`);
     this.getAnimes();
    }
 
    getAnimes() {
-     console.log(`usando el metodo getAnimes Directo del servicio`);
      return this.animeList;
    }
 
@@ -80,7 +78,7 @@ export class AnimeService {
 
   findAnimeByName( searchTerm: string) {
     const term = searchTerm.toLocaleLowerCase();
-    let animeArr = [];
+    const animeArr = [];
     if ( searchTerm.length > 0) {
       this.animeList.forEach( (elem) => {
         if ( elem.nombre.toLocaleLowerCase().indexOf(term) >= 0) {
