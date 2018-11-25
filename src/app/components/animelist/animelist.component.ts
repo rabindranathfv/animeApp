@@ -21,8 +21,6 @@ export class AnimelistComponent implements OnInit {
   }
 
   getId( id: number) {
-    console.log(`usando el metodo getId en animelist component`);
     this.routes.navigate( ['/anime-detail', id]);
   }
-
 }

@@ -18,6 +18,7 @@ import { AnimelistComponent } from './components/animelist/animelist.component';
 import { AnimetopComponent } from './components/animetop/animetop.component';
 import { AnimeDetailComponent } from './components/anime-detail/anime-detail.component';
 import { SearchAnimeComponent } from './components/search-anime/search-anime.component';
+import { AnimeCardComponent } from './components/anime-card/anime-card.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SearchAnimeComponent } from './components/search-anime/search-anime.com
     AnimelistComponent,
     AnimetopComponent,
     AnimeDetailComponent,
-    SearchAnimeComponent
+    SearchAnimeComponent,
+    AnimeCardComponent
   ],
   imports: [
     BrowserModule,

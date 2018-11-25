@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { AnimeService } from '../../services/anime.service';
 
 @Component({
   selector: 'app-animetop',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnimetopComponent implements OnInit {
 
-  constructor() { }
+  animeList: any = [];
+
+  constructor( public _animeService: AnimeService) { }
 
   ngOnInit() {
+    this.animeList = this._animeService.getAnimes();
   }
 
 }
