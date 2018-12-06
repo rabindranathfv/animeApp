@@ -26,6 +26,7 @@
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" [routerLink]="['/search', searchTerm]" (keyup.enter)="findAnime(searchTerm.value)" #searchTerm>
                 <button [routerLink]="['/search', searchTerm]" (click)="findAnime(searchTerm.value)" class="btn btn-outline-primary my-2 my-sm-0" type="button">Search</button>
+                <button (click)="login()" id="login-btn" class="btn btn-outline-primary my-2 my-sm-0" type="button"><i class="fas fa-user">Login</i></button>
             </form>
         </div>
 

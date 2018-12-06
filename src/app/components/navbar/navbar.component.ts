@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+// services
 import { AnimeService } from '../../services/anime.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -12,10 +14,15 @@ export class NavbarComponent implements OnInit {
 
   anime: any = [];
   constructor( public _animeService: AnimeService,
+               private auth: AuthService,
                private router: Router
     ) { }
 
   ngOnInit() {
+  }
+
+  login() {
+    this.auth.login();
   }
 
 
