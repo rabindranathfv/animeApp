@@ -24,9 +24,9 @@ const routes: Routes = [
   },
   {
     path: 'profile',
-    component: ProfileComponent
+    component: ProfileComponent,
     // use N-conditions and for enter all must be true
-    // canActivate: [ AuthGuardService ]
+    canActivate: [ AuthGuardService ]
   },
   { path: 'anime-detail/:id', component: AnimeDetailComponent },
   { path: 'search/:searchTerm', component: SearchAnimeComponent },
