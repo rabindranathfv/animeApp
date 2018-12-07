@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+// services
+import { AuthGuardService } from '../app/services/auth-guard.service';
+
 // components
 import { BodyComponent } from './components/body/body.component';
 import { AnimelistComponent } from './components/animelist/animelist.component';
@@ -12,7 +15,12 @@ import { SearchAnimeComponent } from './components/search-anime/search-anime.com
 const routes: Routes = [
   { path: 'home', component: BodyComponent},
   { path: 'anime', component: AnimelistComponent },
-  { path: 'anime-top', component: AnimetopComponent },
+  {
+    path: 'anime-top',
+    component: AnimetopComponent,
+    // use N-conditions and for enter all must be true
+    canActivate: [ AuthGuardService ]
+  },
   { path: 'anime-detail/:id', component: AnimeDetailComponent },
   { path: 'search/:searchTerm', component: SearchAnimeComponent },
   // ruta por defecto sino cae en las anteriormente declaras
