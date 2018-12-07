@@ -8,5 +8,6 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    /* add when you are using navbar with class fixed-top */
     padding-top: 70px;
 }

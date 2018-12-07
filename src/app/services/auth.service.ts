@@ -14,8 +14,8 @@ export class AuthService {
     clientID: 'ErHiZZoBLd0sdXB1HRICI7Sjz773nQi1',
     domain: 'authanimeapp.auth0.com',
     responseType: 'token id_token',
-    redirectUri: 'http://localhost:3000/callback',
-    scope: 'openid'
+    redirectUri: 'http://localhost:4200/callback',
+    scope: 'openid profile'
   });
 
   constructor( public router: Router ) { }
