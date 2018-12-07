@@ -10,14 +10,14 @@
             </a>
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <!-- clase active para desabilitar en el navbar -->
-                <li class="nav-item" routerLinkActive="active">
+                <!-- <li class="nav-item" routerLinkActive="active">
                     <a class="nav-link" href=" " [routerLink]="['/home']">home</a>
-                </li>
+                </li> -->
 
                 <li class="nav-item" routerLinkActive="active">
                     <a class="nav-link" href="" [routerLink]="['/anime']">Anime List</a>
                 </li>
-                <li class="nav-item" routerLinkActive="active">
+                <li class="nav-item" routerLinkActive="active" *ngIf="auth.isAuthenticated()">
                     <!-- clase disabled para desabilitar en el navbar -->
                     <a class="nav-link " href=" " [routerLink]="['/anime-top']">Top Anime</a>
                 </li>
@@ -25,8 +25,9 @@
 
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" [routerLink]="['/search', searchTerm]" (keyup.enter)="findAnime(searchTerm.value)" #searchTerm>
-                <button [routerLink]="['/search', searchTerm]" (click)="findAnime(searchTerm.value)" class="btn btn-outline-primary my-2 my-sm-0" type="button">Search</button>
-                <button (click)="login()" id="login-btn" class="btn btn-outline-primary my-2 my-sm-0" type="button"><i class="fas fa-user">Login</i></button>
+                <button [routerLink]="['/search', searchTerm]" (click)="findAnime(searchTerm.value)" class="btn btn-outline-primary my-2 my-sm-0 btn-sm" type="button">Search</button>
+                <button *ngIf="!auth.isAuthenticated()" (click)="login()" id="login-btn" class="btn btn-outline-primary my-2 my-sm-0 btn-sm" type="button"><i class="fas fa-user">Login</i></button>
+                <button *ngIf="auth.isAuthenticated()" (click)="logout()" id="login-btn" class="btn btn-outline-primary my-2 my-sm-0 btn-sm" type="button"><i class="fas fa-sign-out-alt">logout</i></button>
             </form>
         </div>
 

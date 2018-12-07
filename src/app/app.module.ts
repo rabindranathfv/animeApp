@@ -9,7 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 // services
 import { AnimeService } from './services/anime.service';
 import { AuthService } from './services/auth.service';
-
+import { AuthGuardService } from './services/auth-guard.service'
 // components
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -41,7 +41,8 @@ import { AnimeCardComponent } from './components/anime-card/anime-card.component
   ],
   providers: [
     AnimeService,
-    AuthService
+    AuthService,
+    AuthGuardService
   ],
   bootstrap: [AppComponent]
 })

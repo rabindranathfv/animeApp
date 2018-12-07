@@ -16,13 +16,19 @@ export class NavbarComponent implements OnInit {
   constructor( public _animeService: AnimeService,
                private auth: AuthService,
                private router: Router
-    ) { }
+    ) {
+      auth.handleAuthentication();
+     }
 
   ngOnInit() {
   }
 
   login() {
     this.auth.login();
+  }
+
+  logout() {
+    this.auth.logout();
   }
 
 
