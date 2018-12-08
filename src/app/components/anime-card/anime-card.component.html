@@ -1,13 +1,17 @@
-<div class="card">
-    <a name="" id="id" href="#" [routerLink]="['/anime-detail', id]">
+<div class="card" [id]="anime.id">
+    <div class="card-header">
+        <h5 class="card-title">{{ anime.title }}</h5>
+        <!-- <a name="" [id]="anime.id" href="#" [routerLink]="['/anime-detail', id]">
         <img class="card-img-top" [src]="anime.img" [alt]="anime.nombre">
-    </a>
+    </a> -->
+    </div>
     <div class="card-body">
-        <h5 class="card-title">{{ anime.nombre }}</h5>
-        <p class="card-text">{{ anime.bio }}</p>
-        <button type="button" class="btn btn-outline-primary btn-block" (click)="getId(anime.id)"> See More of {{ anime.nombre }}!!</button>
+        <p class="card-text">{{ anime.director }}</p>
+        <p class="card-text">{{ anime.producer }}</p>
+        <p class="card-text">{{ anime.description }}</p>
+        <button type="button" class="btn btn-outline-primary btn-block" (click)="getId(anime.id)"> See More of {{ anime.title    }}!!</button>
     </div>
     <div class="card-footer">
-        <small class="text-muted text-center">{{ anime.casa }} - {{ anime.aparicion }}</small>
+        <small class="text-muted text-center">{{ anime.release_date }}</small>
     </div>
 </div>

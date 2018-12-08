@@ -11,20 +11,19 @@ import { AnimeService } from '../../services/anime.service';
 })
 export class AnimelistComponent implements OnInit {
 
-  animelist: any;
+  animelist: any[] = [];
   constructor( public _animeService: AnimeService,
                private routes: Router ) { }
 
   ngOnInit() {
-    // this.animelist = this._animeService.getAnimes();
-    //     .subscribe( (resp: any) => {
-    //       console.log(`se esta ejecutando el subscribe`);
-    //       console.log(resp);
-    //     }, (err) => {
-    //       console.log(err);
-    //     });
-    // console.log(this.animelist);
-
+   this._animeService.getAnimes()
+         .subscribe( (resp: any) => {
+           console.log(resp);
+           this.animelist = resp;
+         }, (err) => {
+           console.log(err);
+         });
+  console.log(this.animelist);
   }
 
   getId( id: number) {

@@ -74,17 +74,17 @@ export class AnimeService {
 
     const httpOptions = {
       headers: new HttpHeaders({
-        'Content': 'application/json',
+        'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'
       })
     };
-    const apiUrl = `https://api.jikan.moe/v3/anime/${ query }`;
+    const apiUrl = `https://ghibliapi.herokuapp.com/${ query }`;
     return this.http.get(apiUrl, httpOptions);
     }
-    // getAnimes() {
-    //   console.log(`se esta ejecutando getAnimes`);
-    //   return this.getQuery(`1/episodes/`).pipe( map( (resp: any) => resp.articles ));
-    // }
+
+    getAnimes() {
+      return this.getQuery(`films/`).pipe( map( (resp: any) => resp ));
+    }
 
   //  getAnime( id: number) {
   //    return this.animeList[id];
