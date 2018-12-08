@@ -8,7 +8,7 @@ import { AnimeService } from '../../services/anime.service';
 })
 export class AnimetopComponent implements OnInit {
 
-  animeList: any = [];
+  characterlist: any = [];
 
   constructor( public _animeService: AnimeService) { }
 
@@ -16,12 +16,11 @@ export class AnimetopComponent implements OnInit {
     this._animeService.getAnimesTop()
          .subscribe( (resp: any) => {
            console.log(resp);
-           this.animeList = resp;
+           this.characterlist = resp;
          }, (err) => {
            console.log(err);
          });
-  console.log(this.animeList);
-    // this.animeList = this._animeService.getAnimes();
+  console.log(this.characterlist);
   }
 
 }

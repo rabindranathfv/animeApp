@@ -21,6 +21,7 @@ import { AnimeDetailComponent } from './components/anime-detail/anime-detail.com
 import { SearchAnimeComponent } from './components/search-anime/search-anime.component';
 import { AnimeCardComponent } from './components/anime-card/anime-card.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { CharacterCardComponent } from './components/character-card/character-card.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     AnimeDetailComponent,
     SearchAnimeComponent,
     AnimeCardComponent,
-    ProfileComponent
+    ProfileComponent,
+    CharacterCardComponent
   ],
   imports: [
     BrowserModule,

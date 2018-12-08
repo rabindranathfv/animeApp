@@ -26,7 +26,7 @@ export class BodyComponent implements OnInit {
            console.log(resp);
            this.animeList = resp;
          }, (err) => {
-           console.log(err);
+           console.error(err);
          });
   }
 

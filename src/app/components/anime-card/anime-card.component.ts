@@ -10,7 +10,6 @@ export class AnimeCardComponent implements OnInit {
   // Recibir data desde afuera
   @Input() anime: any = {};
   @Input() id: number;
-  @Input() type: number;
 
   constructor( private router: Router) { }
 

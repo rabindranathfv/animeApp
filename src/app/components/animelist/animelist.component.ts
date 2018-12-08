@@ -21,9 +21,9 @@ export class AnimelistComponent implements OnInit {
            console.log(resp);
            this.animelist = resp;
          }, (err) => {
-           console.log(err);
+           console.error(err);
          });
-  console.log(this.animelist);
+  // console.log(this.animelist);
   }
 
   getId( id: number) {
