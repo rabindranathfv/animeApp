@@ -86,9 +86,9 @@ export class AnimeService {
       return this.getQuery(`films/`).pipe( map( (resp: any) => resp ));
     }
 
-  //  getAnime( id: number) {
-  //    return this.animeList[id];
-  //  }
+    getAnime() {
+      return this.getAnimes();
+    }
 
     getAnimesTop() {
       return this.getQuery(`people/`).pipe( map( (resp: any) => resp));
