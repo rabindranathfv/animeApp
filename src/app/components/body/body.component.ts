@@ -17,7 +17,7 @@ export class BodyComponent implements OnInit {
                private router: Router,
                private activatedRoute: ActivatedRoute
     ) {
-      this.animeList = this._animeService.getAnimes();
+      // this.animeList = this._animeService.getAnimes();
      }
 
   ngOnInit() {

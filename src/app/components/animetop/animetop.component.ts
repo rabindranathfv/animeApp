@@ -13,7 +13,7 @@ export class AnimetopComponent implements OnInit {
   constructor( public _animeService: AnimeService) { }
 
   ngOnInit() {
-    this.animeList = this._animeService.getAnimes();
+    // this.animeList = this._animeService.getAnimes();
   }
 
 }
