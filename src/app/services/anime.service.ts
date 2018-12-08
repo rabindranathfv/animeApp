@@ -90,9 +90,9 @@ export class AnimeService {
   //    return this.animeList[id];
   //  }
 
-  //  getAnimesTop() {
-  //   return this.animeList;
-  // }
+    getAnimesTop() {
+      return this.getQuery(`people/`).pipe( map( (resp: any) => resp));
+    }
 
   // getAnimesRandonly() {
   //   return this.animeList;

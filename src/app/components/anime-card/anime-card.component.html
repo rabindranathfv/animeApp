@@ -1,17 +1,46 @@
-<div class="card" [id]="anime.id">
-    <div class="card-header">
-        <h5 class="card-title">{{ anime.title }}</h5>
-        <!-- <a name="" [id]="anime.id" href="#" [routerLink]="['/anime-detail', id]">
-        <img class="card-img-top" [src]="anime.img" [alt]="anime.nombre">
-    </a> -->
+<ng-container *ngIf="type === 0" ; else elseTemplate>
+    <div class="card " [id]="anime.id ">
+        <div class="card-header ">
+            <h5 class="card-title "><i class="fas fa-film "></i> {{ anime.title }}</h5>
+            <!-- <a name=" " [id]="anime.id " href="# " [routerLink]="[ '/anime-detail', id] ">
+                    <img class="card-img-top " [src]="anime.img " [alt]="anime.nombre ">
+                </a> -->
+        </div>
+        <div class="card-body ">
+
+            <label for="director ">Director</label>
+            <p class="card-text "><i class="fas fa-video "></i> {{ anime.director }}</p>
+            <label for="produer ">Producer</label>
+            <p class="card-text "><i class="fas fa-edit "></i> {{ anime.producer }}</p>
+            <label for="Description ">Description</label>
+            <p class="card-text "><i class="fas fa-pen "></i> {{ anime.description }}</p>
+            <button type="button " class="btn btn-outline-primary btn-block " (click)="getId(anime.id) ">More of {{ anime.title }}!!</button>
+        </div>
+        <div class="card-footer ">
+            <small class="text-muted text-center ">{{ anime.release_date }}</small>
+        </div>
     </div>
-    <div class="card-body">
-        <p class="card-text">{{ anime.director }}</p>
-        <p class="card-text">{{ anime.producer }}</p>
-        <p class="card-text">{{ anime.description }}</p>
-        <button type="button" class="btn btn-outline-primary btn-block" (click)="getId(anime.id)"> See More of {{ anime.title    }}!!</button>
+
+</ng-container>
+
+<ng-template #elseTemplate>
+    <div class="card " [id]="anime.id ">
+        <div class="card-header ">
+            <h5 class="card-title "><i class="fas fa-film "></i> {{ anime.name }}</h5>
+            <!-- <a name=" " [id]="anime.id " href="# " [routerLink]="[ '/anime-detail', id] ">
+                    <img class="card-img-top " [src]="anime.img " [alt]="anime.nombre ">
+                </a> -->
+        </div>
+        <div class="card-body ">
+
+            <label for="Gender">Gender</label>
+            <p class="card-text "><i class="fas fa-video "></i> {{ anime.gender }}</p>
+            <label for="Age">Age</label>
+            <p class="card-text "><i class="fas fa-edit "></i> {{ anime.age }}</p>
+        </div>
+        <div class="card-footer ">
+            <small class="text-muted text-center ">{{ anime.release_date }}</small>
+        </div>
     </div>
-    <div class="card-footer">
-        <small class="text-muted text-center">{{ anime.release_date }}</small>
-    </div>
-</div>
+
+</ng-template>

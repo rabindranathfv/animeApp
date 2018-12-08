@@ -3,8 +3,10 @@
         <div class="col">
             <div class="card-columns">
                 <!-- enviado data al componente hijo a traves de un @Input() son anime y id declara en el componente -->
-                <app-anime-card [anime]="anime[i]" [id]="anime[i].id" *ngFor="let anime of animelist;let i = index"></app-anime-card>
+                <app-anime-card [anime]="anime" [type]="0" [id]="anime.id" *ngFor="let anime of animelist;let i = index"></app-anime-card>
                 <div>
                 </div>
             </div>
         </div>
+    </div>
+</div>

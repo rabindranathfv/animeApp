@@ -15,7 +15,6 @@ import { AuthGuardService } from './services/auth-guard.service'
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BodyComponent } from './components/body/body.component';
-import { CarrouselComponent } from './components/carrousel/carrousel.component';
 import { AnimelistComponent } from './components/animelist/animelist.component';
 import { AnimetopComponent } from './components/animetop/animetop.component';
 import { AnimeDetailComponent } from './components/anime-detail/anime-detail.component';
@@ -28,7 +27,6 @@ import { ProfileComponent } from './components/profile/profile.component';
     AppComponent,
     NavbarComponent,
     BodyComponent,
-    CarrouselComponent,
     AnimelistComponent,
     AnimetopComponent,
     AnimeDetailComponent,

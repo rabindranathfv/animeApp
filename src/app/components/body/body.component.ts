@@ -21,6 +21,13 @@ export class BodyComponent implements OnInit {
      }
 
   ngOnInit() {
+    this._animeService.getAnimes()
+         .subscribe( (resp: any) => {
+           console.log(resp);
+           this.animeList = resp;
+         }, (err) => {
+           console.log(err);
+         });
   }
 
 }
