@@ -98,17 +98,19 @@ export class AnimeService {
   //   return this.animeList;
   // }
 
-  // findAnimeByName( searchTerm: string) {
-  //   const term = searchTerm.toLocaleLowerCase();
-  //   const animeArr = [];
-  //   if ( searchTerm.length > 0) {
-  //     this.animeList.forEach( (elem, id) => {
-  //       if ( elem.nombre.toLocaleLowerCase().indexOf(term) >= 0) {
-  //         animeArr.push(elem);
-  //       }
-  //     });
+    findAnimeByName( searchTerm: string) {
+       const term = searchTerm.toLocaleLowerCase();
+       const animeArr: any = [];
+       if ( searchTerm.length > 0) {
+         this.getAnimes().subscribe( (resp: any) => {
+           resp.forEach( (elem: any) => {
+          if ( elem.title.toLocaleLowerCase().indexOf(term) >= 0) {
+            animeArr.push(elem);
+         }
+       });
+      });
 
-  //   }
-  //   return animeArr;
-  // }
+     }
+     return animeArr;
+   }
 }

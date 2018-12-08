@@ -22,8 +22,8 @@ export class SearchAnimeComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.params.subscribe((params) => {
       this.searchTerm = params['searchTerm'];
-      // this.animeList = this._animeService.findAnimeByName(params['searchTerm']);
-      // console.log(this.animeList);
+      this.animeList = this._animeService.findAnimeByName(params['searchTerm']);
+      console.log(this.animeList);
     });
   }
 
