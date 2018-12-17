@@ -14,8 +14,8 @@ export class NavbarComponent implements OnInit {
 
   anime: any = [];
   constructor( public _animeService: AnimeService,
-               private auth: AuthService,
-               private router: Router
+               public auth: AuthService,
+               public router: Router
     ) {
       auth.handleAuthentication();
      }
